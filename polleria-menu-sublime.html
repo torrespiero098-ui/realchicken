@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pollería Real Chicken</title>
+  <style>
+    :root {
+      --rojo: #e63946;
+      --amarillo: #ffcc00;
+      --fondo: #1a1a1a;
+      --texto: #f5f5f5;
+      --gris: #999;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--fondo);
+      color: var(--texto);
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+      background: var(--rojo);
+      color: white;
+    }
+    h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 700;
+    }
+    h2 {
+      color: var(--amarillo);
+      font-size: 20px;
+      margin-top: 25px;
+      border-bottom: 2px solid var(--rojo);
+      padding-bottom: 5px;
+    }
+    .menu {
+      padding: 20px;
+    }
+    .item {
+      background: #222;
+      border-radius: 10px;
+      padding: 10px;
+      margin: 10px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .item h3 {
+      margin: 0;
+      font-size: 18px;
+      color: var(--amarillo);
+    }
+    .item p {
+      margin: 5px 0;
+      color: var(--gris);
+    }
+    .price {
+      color: var(--rojo);
+      font-weight: 700;
+      margin-top: 5px;
+    }
+    .btn {
+      background: #25D366;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-weight: 600;
+      width: 100%;
+      margin-top: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: var(--gris);
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Pollería Real Chicken 🍗</h1>
+    <p>¡El mejor sabor a la brasa!</p>
+  </header>
+
+  <section class="menu">
+    <h2>🐔 Pollos a la Brasa</h2>
+    <div class="item">
+      <h3>1 Pollo Entero</h3>
+      <p>Con papas, ensalada y gaseosa 1.5L</p>
+      <div class="price">S/ 45.00</div>
+      <button class="btn" onclick="orderWhats('1 Pollo Entero a la Brasa')">Pedir por WhatsApp</button>
+    </div>
+
+    <div class="item">
+      <h3>1/2 Pollo</h3>
+      <p>Con papas, ensalada y crema</p>
+      <div class="price">S/ 25.00</div>
+      <button class="btn" onclick="orderWhats('1/2 Pollo a la Brasa')">Pedir por WhatsApp</button>
+    </div>
+
+    <h2>🔥 Parrillas</h2>
+    <div class="item">
+      <h3>Parrilla Familiar</h3>
+      <p>Pollo, anticucho, chorizo, papas y ensaladas</p>
+      <div class="price">S/ 75.00</div>
+      <button class="btn" onclick="orderWhats('Parrilla Familiar')">Pedir por WhatsApp</button>
+    </div>
+
+    <h2>🥡 Combos</h2>
+    <div class="item">
+      <h3>Combo Familiar</h3>
+      <p>1 Pollo, papas, ensalada y 2 gaseosas</p>
+      <div class="price">S/ 69.90</div>
+      <button class="btn" onclick="orderWhats('Combo Familiar')">Pedir por WhatsApp</button>
+    </div>
+
+    <h2>🥤 Bebidas</h2>
+    <div class="item">
+      <h3>Gaseosa 1.5L</h3>
+      <p>Inca Kola o Coca-Cola</p>
+      <div class="price">S/ 6.50</div>
+      <button class="btn" onclick="orderWhats('Gaseosa 1.5L')">Pedir por WhatsApp</button>
+    </div>
+  </section>
+
+  <footer>
+    📍 Av. Principal 123, Miraflores <br>
+    📞 WhatsApp: <strong>914 923 933</strong><br>
+    © 2025 Pollería Real Chicken
+  </footer>
+
+  <script>
+    const WA_NUMBER = "51914923933";
+    function orderWhats(product){
+      const msg = `Hola! Quiero pedir: *${product}*`;
+      window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`, "_blank");
+    }
+  </script>
+</body>
+</html>
